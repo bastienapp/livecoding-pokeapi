@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="|${pokemon.name}|"></h1>
+<p th:text="|id: ${pokemon.id}|"></p>
+<p th:text="|height: ${pokemon.height}|"></p>
+<ul>
+    <li th:each="typeContainer : ${pokemon.types}">
+        <p th:text="|type name: ${typeContainer.type.name}|"></p>
+        <p th:text="|type url: ${typeContainer.type.url}|"></p>
+    </li>
+</ul>
+</body>
+</html>
